@@ -9,7 +9,7 @@ export default function Profile() {
             <div className="ml-4">
             <h2 className="text-2xl font-semibold">@norbit12</h2>
             <div className="mt-1">
-                <div className="flex"><Link href="https://github.com/norbit12"><FiGithub className="text-lg text-slate-800" /></Link></div>
+                <div className="flex"><Link href="https://github.com/norbit12"><FiGithub className="text-lg text-slate-700" /></Link></div>
             </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Profile from "@/components/Profile";
+import Image from "next/image";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<
@@ -25,7 +26,10 @@ export default function Home() {
 
         {activeTab === "works" && (
           <div>
-            <p>Nothing here yet...</p>
+            <div className="flex border border-slate-200 p-2">
+              <Image src="/works/dojang.svg" alt="dojang" width={100} height={100} className="w-8 mr-2 border-r border-slate-200" />
+              <p>DoJang</p>
+            </div>
           </div>
         )}
 
