@@ -1,19 +1,40 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FiGithub } from "react-icons/fi";
+"use client"
+import { useState } from "react";
+import Profile from "@/components/Profile";
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<
+    "articles" | "works" | "playground"
+  >("articles");
+
   return (
     <div className="max-w-md w-full md:w-1/3 mx-4 md:mx-auto my-6">
-      <div className="flex">
-        <Image src="/character.png" alt="Icon" width={100} height={100} className="w-12 h-12 aspect-square p-1 border border-slate-200" />
-        <div className="ml-4">
-          <h2 className="text-2xl font-semibold">@norbit12</h2>
-          <div className="mt-1">
-            <div className="flex"><Link href="https://github.com/norbit12"><FiGithub className="text-lg text-slate-800" /></Link></div>
+      <Profile />
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 border border-slate-300 divide-y md:divide-y-0 md:divide-x divide-slate-300">
+        <button onClick={() => setActiveTab("articles")} className={`cursor-pointer py-1 hover:bg-slate-100 ${activeTab === "articles" ? "bg-slate-100 font-semibold" : ""}`}>Articles</button>
+        <button onClick={() => setActiveTab("works")}className={`cursor-pointer py-1 hover:bg-slate-100 ${activeTab === "works" ? "bg-slate-100 font-semibold" : ""}`}>Works</button>
+        <button onClick={() => setActiveTab("playground")} className={`cursor-pointer py-1 hover:bg-slate-100 ${activeTab === "playground" ? "bg-slate-100 font-semibold" : ""}`}>Playground</button>
+      </div>
+
+      <div className="mt-6">
+        {activeTab === "articles" && (
+          <div>
+            <p>Nothing here yet...</p>
           </div>
-        </div>
+        )}
+
+        {activeTab === "works" && (
+          <div>
+            <p>Nothing here yet...</p>
+          </div>
+        )}
+
+        {activeTab === "playground" && (
+          <div>
+            <p>Nothing here yet...</p>
+          </div>
+        )}
       </div>
     </div>
-  )
+  );
 }
