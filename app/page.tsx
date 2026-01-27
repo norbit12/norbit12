@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Profile from "@/components/Profile";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<
@@ -26,9 +27,11 @@ export default function Home() {
 
         {activeTab === "works" && (
           <div>
-            <div className="flex border border-slate-200 p-2">
-              <Image src="/works/dojang.svg" alt="dojang" width={100} height={100} className="w-8 mr-2 border-r border-slate-200" />
-              <p>DoJang</p>
+            <div className="flex border border-slate-200 shadow-sm">
+              <div className="w-10 p-2">
+                <Image src="/works/dojang.svg" alt="dojang" width={100} height={100} className="w-full" />
+              </div>
+              <div className="p-1"><p className="text-lg font-semibold">DoJang</p><Link href="https://djng.vercel.app"><p className="text-sm underline text-slate-700">https://djng.vercel.app</p></Link></div>
             </div>
           </div>
         )}
