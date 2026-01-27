@@ -1,1 +1,1 @@
-![](https://raw.githubusercontent.com/norbit12/norbit12/refs/heads/main/public/bg.png)
+![](https://raw.githubusercontent.com/norbit12/norbit12/refs/heads/main/public/readme.png)
