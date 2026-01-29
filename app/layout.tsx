@@ -8,7 +8,7 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
-  title: "ᴺᴼᴿᴮᴵᵀ12",
+  title: "norbit12",
   description: "Student learning web design.",
 };
 
