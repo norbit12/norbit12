@@ -51,8 +51,20 @@ export default function Home() {
         )}
 
         {activeTab === "playground" && (
-          <div>
-            <p>Nothing here yet...</p>
+          <div className="grid grid-cols-2 gap-3">
+            <Link href="/pg/animations" className="p-4 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+              <p className="font-medium">Animations</p>
+              <p className="mt-1 text-sm text-slate-500">
+                UI animation experiments
+              </p>
+            </Link>
+
+            <div className="p-4 border border-slate-200 rounded-lg opacity-50 cursor-not-allowed">
+              <p className="font-medium">Mini Games</p>
+              <p className="mt-1 text-sm text-slate-500">
+                Coming soon...
+              </p>
+            </div>
           </div>
         )}
       </div>
