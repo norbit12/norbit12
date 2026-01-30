@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="max-w-md w-full md:w-1/3 px-4 md:px-0 mx-auto my-6">
-      <Image src="/header.png" alt="header" width={200} height={200} className="w-32 mx-auto mb-8 opacity-90"/>
+      <Image src="/header.png" alt="header" width={804} height={258} className="w-32 mx-auto mb-8 opacity-90"/>
       <Profile />
       <div className="mt-8 flex rounded-lg border border-slate-200 overflow-hidden bg-slate-50">
         {(["articles", "works", "playground"] as const).map((tab) => (
