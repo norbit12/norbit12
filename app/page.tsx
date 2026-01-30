@@ -14,21 +14,21 @@ export default function Home() {
   const tabVariants: Variants = {
     initial: {
       opacity: 0,
-      y: 4,
+      y: 5,
     },
     animate: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.2,
-        ease: "easeOut" as const,
+        duration: 0.22,
+        ease: [0.22, 1, 0.36, 1],
       },
     },
     exit: {
       opacity: 0,
-      y: -8,
+      y: -6,
       transition: {
-        duration: 0.15,
+        duration: 0.16,
         ease: "easeIn" as const,
       },
     },
